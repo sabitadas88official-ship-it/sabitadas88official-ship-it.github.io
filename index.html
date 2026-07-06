@@ -19,20 +19,38 @@ color:#fff;
 }
 
 header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
 background:#2563eb;
-padding:18px;
-text-align:center;
-font-size:28px;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:22px;
 font-weight:bold;
 }
 
+nav a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#22c55e;
+}
+
 .hero{
-padding:70px 20px;
 text-align:center;
+padding:70px 20px;
 }
 
 .hero h1{
-font-size:34px;
+font-size:38px;
 margin-bottom:15px;
 }
 
@@ -46,7 +64,7 @@ margin-bottom:25px;
 display:inline-block;
 background:#22c55e;
 color:white;
-padding:14px 30px;
+padding:14px 28px;
 text-decoration:none;
 border-radius:8px;
 font-size:18px;
@@ -64,13 +82,33 @@ margin-bottom:30px;
 .card{
 background:#1e293b;
 padding:20px;
+border-radius:10px;
 margin-bottom:20px;
-border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
-margin-bottom:10px;
 color:#60a5fa;
+margin-bottom:10px;
+}
+
+.contact{
+padding:40px 20px;
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+background:#25D366;
+padding:15px 25px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:18px;
 }
 
 footer{
@@ -79,52 +117,63 @@ text-align:center;
 padding:20px;
 margin-top:40px;
 }
+
+@media(max-width:700px){
+
 header{
-    background:#2563eb;
-    padding:15px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
+flex-direction:column;
 }
 
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    color:white;
+nav{
+margin-top:10px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:15px;
-    font-size:16px;
-    font-weight:bold;
+display:inline-block;
+margin:8px;
 }
 
-nav a:hover{
-    color:#22c55e;
+.hero h1{
+font-size:28px;
 }
 
-<header>
-    <div class="logo">Patra Digital Studio</div>
+}
+</style>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+</head>
+
 <body>
 
-<section class="hero">
-<h1>Earn & Grow Digitally</h1>
-<p>Learn Online Income, Website Development, App Development & Digital Services.</p>
+<header>
 
-<a href="#" class="btn">Start Learning</a>
+<div class="logo">
+Patra Digital Studio
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Earn & Grow Digitally</h1>
+
+<p>
+Learn Online Income, Website Development,
+App Development & Digital Marketing.
+</p>
+
+<a href="#services" class="btn">
+Start Learning
+</a>
+
 </section>
 
-<section class="services">
+<section id="services" class="services">
 
 <h2>Our Services</h2>
 
@@ -140,18 +189,36 @@ nav a:hover{
 
 <div class="card">
 <h3>📱 App Development</h3>
-<p>Android apps built for startups and businesses.</p>
+<p>Android apps for startups and businesses.</p>
 </div>
 
 <div class="card">
 <h3>🎨 Graphic Design</h3>
-<p>Logo, Banner, Poster & Social Media Design.</p>
+<p>Logo, Banner, Poster and Social Media Design.</p>
 </div>
 
 </section>
 
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p style="margin:20px 0;">
+Need a Website or Digital Service?
+</p>
+
+<a href="https://wa.me/91XXXXXXXXXX">
+Chat on WhatsApp
+</a>
+
+</section>
+
 <footer>
-© 2026 Patra Digital Studio | All Rights Reserved
+
+© 2026 Patra Digital Studio
+<br>
+All Rights Reserved
+
 </footer>
 
 </body>
